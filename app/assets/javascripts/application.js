@@ -10,7 +10,13 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery
+//= require jquery3
+//= require toastr
+//= require validate
+//= require popper
+//= require bootstrap-sprockets
 //= require jquery_ujs
-//= require twitter/bootstrap
+//= require turbolinks
+//= require scrollspy.min
+//= require stickyFill.min
 //= require_tree .

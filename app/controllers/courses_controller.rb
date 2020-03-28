@@ -1,9 +1,24 @@
 class CoursesController < ApplicationController
+
   def index
-    @courses = Course.order(position: :asc)
+    @courses = decorated_courses
   end
 
   def show
-    @course = Course.friendly.find(params[:id])
+    @course = CourseDecorator.new(course)
+  end
+
+  private
+
+  def decorated_courses
+    ordered_courses.map { |course| CourseDecorator.new(course) }
+  end
+
+  def ordered_courses
+    Course.order(:position)
+  end
+
+  def course
+    Course.includes(:lessons, sections: [:lessons]).friendly.find(params[:id])
   end
 end

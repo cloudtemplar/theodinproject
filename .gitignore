@@ -11,6 +11,7 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+
 # Ignore any assets that may have been precompiled locally
 # e.g. to test run the production environment locally
 /public/assets
@@ -38,9 +39,13 @@
 # vim artifacts
 **.swp
 
+# VS Code artifacts
+/.vscode
+
 # Ignore application configuration
 /config/application.yml
-.env
+/config/database.yml
+.env.local
 
 # secret token
 .secret
@@ -65,3 +70,4 @@ pickle-email-*.html
 =======
 # Versioning
 .rvmrc
+.tool-versions
